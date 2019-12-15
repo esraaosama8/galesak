@@ -1,0 +1,343 @@
+<!--
+---- Login page ---------- >
+html, body {
+    background-image: url('okaz.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+    font-family: 'Numans', sans-serif;
+}
+
+.form-signin {
+    max-width: 330px;
+    padding: 15px;
+    margin: 0 auto;
+}
+
+.form-signin .form-signin-heading, .form-signin .checkbox {
+    margin-bottom: 10px;
+}
+
+.form-signin .checkbox {
+    padding: 10;
+}
+
+.form-signin .form-control {
+    position: relative;
+    font-size: 16px;
+    height: auto;
+    padding: 10px;
+
+
+}
+
+.form-signin .form-control:focus {
+    z-index: 2;
+}
+
+.form-signin input[type="text"] {
+    margin-bottom: 10px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    width: 200px;
+}
+
+.form-signin input[type="password"] {
+    margin-bottom: 10px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    width: 300px;
+}
+
+.account-wall {
+    margin-top: 80px;
+    padding: 1px 8px 1px 8px;
+    background-color: -moz-default-background-color;
+    -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    box-shadow: 20px 2px 22px rgba(0, 0, 0, 0.8);
+}
+
+.login-title {
+    color: #555;
+    font-size: 35px;
+    font-weight: 400;
+    display: block;
+}
+
+.need-help {
+    margin-right: 150px;
+}
+
+.new-account {
+    display: block;
+    margin-right: 70px;
+}
+.btn-block {
+    display: block;
+    width: 100%;
+    padding-right: 0;
+    padding-left: 0;
+}
+
+<!--
+---- ---------- >
+
+<!--
+---- Sign up page ---------- >
+#wrap {
+    background-image: -ms-linear-gradient(top, #FFFFFF 0%, #D3D8E8 100%);
+    /* Mozilla Firefox */
+    background-image: -moz-linear-gradient(top, #FFFFFF 0%, #D3D8E8 100%);
+    /* Opera */
+    background-image: -o-linear-gradient(top, #FFFFFF 0%, #D3D8E8 100%);
+    /* Webkit (Safari/Chrome 10) */
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #FFFFFF), color-stop(1, #D3D8E8));
+    /* Webkit (Chrome 11+) */
+    background-image: -webkit-linear-gradient(top, #FFFFFF 0%, #D3D8E8 100%);
+    /* W3C Markup, IE10 Release Preview */
+    background-image: linear-gradient(to bottom, #FFFFFF 0%, #D3D8E8 100%);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+legend {
+    color: #141823;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.signup-btn {
+    background: #79bc64;
+    background-image: -webkit-linear-gradient(top, #79bc64, #578843);
+    background-image: -moz-linear-gradient(top, #79bc64, #578843);
+    background-image: -ms-linear-gradient(top, #79bc64, #578843);
+    background-image: -o-linear-gradient(top, #79bc64, #578843);
+    background-image: linear-gradient(to bottom, #79bc64, #578843);
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    text-shadow: 0px 1px 0px #898a88;
+    -webkit-box-shadow: 0px 0px 0px #a4e388;
+    -moz-box-shadow: 0px 0px 0px #a4e388;
+    box-shadow: 0px 0px 0px #a4e388;
+    font-family: Arial;
+    color: #ffffff;
+    font-size: 20px;
+    padding: 10px 20px 10px 20px;
+    border: solid #3b6e22 1px;
+    text-decoration: none;
+}
+.radio-inline{
+    padding: 10px 20px 10px 20px;
+}
+.form .form-control {
+    margin-bottom: 10px;
+}
+
+
+
+@media (min-width: 768px) {
+    #home {
+        margin-top: 50px;
+    }
+
+    #home .slogan {
+        color: #0e385f;
+        line-height: 29px;
+        font-weight: bold;
+    }
+}
+
+<!--
+
+
+.account-wall1 {
+    margin-top: 0px;
+    padding: 1px 8px 1px 8px;
+    background-color: -moz-default-background-color;
+    -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    box-shadow: 20px 2px 22px rgba(0, 0, 0, 0.8);
+ width: 700px;
+}
+.availability-table
+{
+    width: 1px;
+    margin-left:auto;
+    margin-right:auto;
+    border: none;
+}
+
+.availability-table thead th:first-child {
+    pointer-events: none;
+    background: white;
+    border: none;
+}
+
+.availability-table td {
+    vertical-align: middle;
+
+}
+
+.availability-table th
+{
+    text-align: center;
+}
+
+/*
+ * Custom checkbox CSS, below are three color classes, day, evening, and night
+ */
+.availability-checkbox {
+    min-height: 1rem;
+    padding-left: 0;
+    margin-right: 0;
+    cursor: pointer;
+}
+
+.availability-checkbox .custom-control-indicator {
+    content: "";
+    display: inline-block;
+    position: relative;
+    width: 30px;
+    height: 10px;
+    background-color: #818181;
+    border-radius: 15px;
+    margin-right: 10px;
+    -webkit-transition: background .3s ease;
+    transition: background .3s ease;
+    vertical-align: middle;
+    margin: 0 16px;
+    box-shadow: none;
+}
+
+.availability-checkbox .custom-control-indicator:after {
+    content: "";
+    position: absolute;
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    background-color: #f1f1f1;
+    border-radius: 21px;
+    box-shadow: 0 1px 3px 1px rgba(0, 0, 0, 0.4);
+    left: -2px;
+    top: -4px;
+    -webkit-transition: left .3s ease, background .3s ease, box-shadow .1s ease;
+    -moz-transition: left .3s ease, background .3s ease, box-shadow .1s ease;
+    -o-transition: left .3s ease, background .3s ease, box-shadow .1s ease;
+    transition: left .3s ease, background .3s ease, box-shadow .1s ease;
+}
+
+.availability-checkbox .custom-control-input:focus ~ .custom-control-indicator {
+    box-shadow: none !important;
+}
+
+/*
+ * Day color codes
+ */
+.checkbox-day .custom-control-input:checked ~ .custom-control-indicator {
+    background-color: #5cb85c;
+    background-image: none;
+    box-shadow: none !important;
+}
+.checkbox-day .custom-control-input:checked ~ .custom-control-indicator:after {
+    background-color: #5cb85c;
+    left: 15px;
+}
+
+/*
+ * Evening color codes
+ */
+.checkbox-evening .custom-control-input:checked ~ .custom-control-indicator {
+    background-color: #f0ad4e;
+    background-image: none;
+    box-shadow: none !important;
+}
+
+.checkbox-evening .custom-control-input:checked ~ .custom-control-indicator:after {
+    background-color: #f0ad4e;
+    left: 15px;
+}
+
+/*
+ * Night color codes
+ */
+.checkbox-night .custom-control-input:checked ~ .custom-control-indicator {
+    background-color: #428bca;
+    background-image: none;
+    box-shadow: none !important;
+}
+.checkbox-night .custom-control-input:checked ~ .custom-control-indicator:after {
+    background-color: #428bca;
+    left: 15px;
+}
+
+<!--
+
+input[type=text], select, textarea {
+
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+    width: 200px;
+}
+
+input[type=integer], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+
+}
+
+input[type=tel], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+}
+
+label {
+    display: inline-block;
+    font-size: inherit;
+    padding: 10px 220px 1px 0;
+}
+
+
+.container1 {
+    max-width: 1700px;
+    padding: 12px 12px 12px 0;
+    display: inline-list-item;
+    color: #141823;
+    font-size: 15px;
+    font-weight: bold;
+    margin-top: -10px;
+    height: 20px;
+}
+.signup-btn1 {
+    background: #79bc64;
+    background-image: -webkit-linear-gradient(top, #79bc64, #578843);
+    background-image: -moz-linear-gradient(top, #79bc64, #578843);
+    background-image: -ms-linear-gradient(top, #79bc64, #578843);
+    background-image: -o-linear-gradient(top, #79bc64, #578843);
+    background-image: linear-gradient(to bottom, #79bc64, #578843);
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    text-shadow: 0px 1px 0px #898a88;
+    -webkit-box-shadow: 0px 0px 0px #a4e388;
+    -moz-box-shadow: 0px 0px 0px #a4e388;
+    box-shadow: 0px 0px 0px #a4e388;
+    font-family: Arial;
+    color: #ffffff;
+    font-size: 20px;
+    padding: 10px 20px 10px 20px;
+    border: solid #3b6e22 1px;
+    text-decoration: none;
+    width: 400px;
+    margin-top: 10px;
+}
+
