@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html>
+<title>Profile</title>
+<head>
+   <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-blue-grey.css">
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans'>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
+</head>
+
+
+<style>
+html, body, h1, h2, h3, h4, h5 {font-family: "Open Sans", sans-serif}
+    .checked {
+  color: orange;
+}
+
+html {
+    font-family: Lato, 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    font-size: 14px;
+}
+
+.availability-table
+{
+    width: 1px;
+    margin-left: 20px;
+    margin-top: 0px;
+    margin-bottom: 30px;
+}
+
+.availability-table thead th:first-child {
+    pointer-events: none;
+    background: white;
+    border: none;
+}
+
+.availability-table td {
+    vertical-align: middle;
+
+}
+
+.availability-table th
+{
+    text-align: center;
+}
+
+/*
+ * Custom checkbox CSS, below are three color classes, day, evening, and night
+ */
+.availability-checkbox {
+    min-height: 1rem;
+    padding-left: 0;
+    margin-right: 0;
+    cursor: pointer;
+}
+
+.availability-checkbox .custom-control-indicator {
+    content: "";
+    display: inline-block;
+    position: relative;
+    width: 30px;
+    height: 10px;
+    background-color: #818181;
+    border-radius: 15px;
+    margin-right: 10px;
+    -webkit-transition: background .3s ease;
+    transition: background .3s ease;
+    vertical-align: middle;
+    margin: 0 16px;
+    box-shadow: none;
+}
+
+.availability-checkbox .custom-control-indicator:after {
+    content: "";
+    position: absolute;
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    background-color: #f1f1f1;
+    border-radius: 21px;
+    box-shadow: 0 1px 3px 1px rgba(0, 0, 0, 0.4);
+    left: -2px;
+    top: -4px;
+    -webkit-transition: left .3s ease, background .3s ease, box-shadow .1s ease;
+    -moz-transition: left .3s ease, background .3s ease, box-shadow .1s ease;
+    -o-transition: left .3s ease, background .3s ease, box-shadow .1s ease;
+    transition: left .3s ease, background .3s ease, box-shadow .1s ease;
+}
+
+.availability-checkbox .custom-control-input:focus ~ .custom-control-indicator {
+    box-shadow: none !important;
+}
+
+/*
+ * Day color codes
+ */
+.checkbox-day .custom-control-input:checked ~ .custom-control-indicator {
+    background-color: #5cb85c;
+    background-image: none;
+    box-shadow: none !important;
+}
+.checkbox-day .custom-control-input:checked ~ .custom-control-indicator:after {
+    background-color: #5cb85c;
+    left: 15px;
+}
+
+/*
+ * Evening color codes
+ */
+.checkbox-evening .custom-control-input:checked ~ .custom-control-indicator {
+    background-color: #f0ad4e;
+    background-image: none;
+    box-shadow: none !important;
+}
+
+.checkbox-evening .custom-control-input:checked ~ .custom-control-indicator:after {
+    background-color: #f0ad4e;
+    left: 15px;
+}
+
+/*
+ * Night color codes
+ */
+.checkbox-night .custom-control-input:checked ~ .custom-control-indicator {
+    background-color: #428bca;
+    background-image: none;
+    box-shadow: none !important;
+}
+.checkbox-night .custom-control-input:checked ~ .custom-control-indicator:after {
+    background-color: #428bca;
+    left: 15px;
+}
+    left: 15px; 
+}
+
+</style>
+<body class="w3-theme-l5">
+
+<!-- Navbar -->
+<div class="w3-top">
+ <div class="w3-bar w3-theme-d2 w3-left-align w3-large">
+  <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-theme-d2" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
+  <a href="#" class="w3-bar-item w3-button w3-padding-large w3-theme-d4"><i class="fa fa-home w3-margin-right"></i></a>
+  <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="Messages"><i class="fa fa-envelope"></i></a>
+  <div class="w3-dropdown-hover w3-hide-small">
+    <button class="w3-button w3-padding-large" title="Notifications"><i class="fa fa-bell"></i><span class="w3-badge w3-right w3-small w3-green">2</span></button>     
+    <div class="w3-dropdown-content w3-card-4 w3-bar-block" style="width:300px">
+      <a href="#" class="w3-bar-item w3-button">Eman khaled was rated 4 stars</a>
+      <a href="#" class="w3-bar-item w3-button">Jane likes your post</a>
+    </div>
+  </div>
+  <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-padding-large w3-hover-white" title="My Account">
+    <img src="64345302_2297428613840954_2391830260229341184_n.jpg" class="w3-circle" style="height:23px;width:23px" alt="Noha Khaled">
+  </a>
+ </div>
+</div>
+
+<!-- Navbar on small screens -->
+<div id="navDemo" class="w3-bar-block w3-theme-d2 w3-hide w3-hide-large w3-hide-medium w3-large">
+ 
+  <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 2</a>
+  <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 3</a>
+  <a href="#" class="w3-bar-item w3-button w3-padding-large">My Profile</a>
+</div>
+
+<!-- Page Container -->
+<div class="w3-container w3-content" style="max-width:1400px;margin-top:80px">    
+  <!-- The Grid -->
+  <div class="w3-row">
+    <!-- Left Column -->
+    <div class="w3-col m3">
+      <!-- Profile -->
+      
+      <div class="w3-card w3-round w3-white">
+        <div class="w3-container">
+         <h4 class="w3-center">My Profile</h4>
+         <p class="w3-center"><img src="64345302_2297428613840954_2391830260229341184_n.jpg" class="w3-circle" style="height:106px;width:106px" alt="Noha Khaled"></p>
+         <hr>
+         
+         <p><i class="fa fa-birthday-cake fa-fw w3-margin-right w3-text-theme"></i>April 1, 1988  </p>
+         <p><i class="fa fa-home fa-fw w3-margin-right w3-text-theme"></i> Giza, Egypt</p>
+         <p><i class="fa fa-pencil fa-fw w3-margin-right w3-text-theme"></i> 0-1 years experience </p>
+          <p><i class="fa fa-pencil fa-fw w3-margin-right w3-text-theme"></i> Driving</p>
+           <p><i class="fa fa-pencil fa-fw w3-margin-right w3-text-theme"></i> Smoking </p>
+            <p><i class="fa fa-pencil fa-fw w3-margin-right w3-text-theme"></i> 2000 minimum pay rate</p>
+       <h5>Star Rating</h5>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star"></span>
+<span class="fa fa-star"></span>       
+
+        </div>
+      </div>
+      <br>
+      
+   
+    </div>
+    
+    
+    
+    
+    
+    
+    
+    <!-- Middle Column -->
+
+
+    
+    
+    <div class="w3-col m7">
+      <div class="w3-row-padding">
+        <div class="w3-col m12">
+          <div class="w3-card w3-round w3-white">
+            <div class="w3-container w3-padding">
+              <h6 class="w3-opacity">Post a job</h6>
+              <p contenteditable="true" class="w3-border w3-padding">Job description:..</p>
+              <button type="button" class="w3-button w3-theme"><i class="fa fa-pencil"></i>  Post</button> 
+            </div>
+          </div>
+        </div>
+      </div>
+        <div class="w3-container w3-card w3-white w3-round w3-margin"><br>
+            <div class="container pt-5">
+            <table class="table table-bordered availability-table">
+                <thead class="table-inverse">
+                <tr>
+                    <th></th>
+                    <th>Satur</th>
+                    <th>Sun</th>
+                    <th>Mon</th>
+                    <th>Tues</th>
+                    <th>Wednes</th>
+                    <th>Thurs</th>
+                    <th>Fri</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>
+                        <b> Morning </b>
+                    </td>
+                    <td>
+                        <label class="custom-control availability-checkbox checkbox-day">
+                            <input type="checkbox" style="opacity:0; position:absolute;" class="custom-control-input">
+                            <span class="custom-control-indicator"></span>
+                        </label>
+                    </td>
+                    <td>
+                        <label class="custom-control availability-checkbox checkbox-day">
+                            <input type="checkbox" style="opacity:0; position:absolute;" class="custom-control-input">
+                            <span class="custom-control-indicator"></span>
+                        </label>
+                    </td>
+                    <td>
+                        <label class="custom-control availability-checkbox checkbox-day">
+                            <input type="checkbox" style="opacity:0; position:absolute;" class="custom-control-input">
+                            <span class="custom-control-indicator"></span>
+                        </label>
+                    </td>
+                    <td>
+                        <label class="custom-control availability-checkbox checkbox-day">
+                            <input type="checkbox" style="opacity:0; position:absolute;" class="custom-control-input">
+                            <span class="custom-control-indicator"></span>
+                        </label>
+                    </td>
+                    <td>
+                        <label class="custom-control availability-checkbox checkbox-day">
+                            <input type="checkbox" style="opacity:0; position:absolute;" class="custom-control-input">
+                            <span class="custom-control-indicator"></span>
+                        </label>
+                    </td>
+                    <td>
+                        <label class="custom-control availability-checkbox checkbox-day">
+                            <input type="checkbox" style="opacity:0; position:absolute;" class="custom-control-input">
+                            <span class="custom-control-indicator"></span>
+                        </label>
+                    </td>
+                    <td>
+                        <label class="custom-control availability-checkbox checkbox-day">
+                            <input type="checkbox" style="opacity:0; position:absolute;" class="custom-control-input">
+                            <span class="custom-control-indicator"></span>
+                        </label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <b>  Evening </b>
+                    </td>
+                    <td>
+                        <label class="custom-control availability-checkbox checkbox-day">
+                            <input type="checkbox" style="opacity:0; position:absolute;" class="custom-control-input">
+                            <span class="custom-control-indicator"></span>
+                        </label>
+                    </td>
+                    <td>
+                        <label class="custom-control availability-checkbox checkbox-day">
+                            <input type="checkbox" style="opacity:0; position:absolute;" class="custom-control-input">
+                            <span class="custom-control-indicator"></span>
+                        </label>
+                    </td>
+                    <td>
+                        <label class="custom-control availability-checkbox checkbox-day">
+                            <input type="checkbox" style="opacity:0; position:absolute;" class="custom-control-input">
+                            <span class="custom-control-indicator"></span>
+                        </label>
+                    </td>
+                    <td>
+                        <label class="custom-control availability-checkbox checkbox-day">
+                            <input type="checkbox" style="opacity:0; position:absolute;" class="custom-control-input">
+                            <span class="custom-control-indicator"></span>
+                        </label>
+                    </td>
+                    <td>
+                        <label class="custom-control availability-checkbox checkbox-day">
+                            <input type="checkbox" style="opacity:0; position:absolute;" class="custom-control-input">
+                            <span class="custom-control-indicator"></span>
+                        </label>
+                    </td>
+                    <td>
+                        <label class="custom-control availability-checkbox checkbox-day">
+                            <input type="checkbox" style="opacity:0; position:absolute;" class="custom-control-input">
+                            <span class="custom-control-indicator"></span>
+                        </label>
+                    </td>
+                    <td>
+                        <label class="custom-control availability-checkbox checkbox-day">
+                            <input type="checkbox" style="opacity:0; position:absolute;" class="custom-control-input">
+                            <span class="custom-control-indicator"></span>
+                        </label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <b>  Night </b>
+                    </td>
+                    <td>
+                        <label class="custom-control availability-checkbox checkbox-day">
+                            <input type="checkbox" style="opacity:0; position:absolute;" class="custom-control-input">
+                            <span class="custom-control-indicator"></span>
+                        </label>
+                    </td>
+                    <td>
+                        <label class="custom-control availability-checkbox checkbox-day">
+                            <input type="checkbox" style="opacity:0; position:absolute;" class="custom-control-input">
+                            <span class="custom-control-indicator"></span>
+                        </label>
+                    </td>
+                    <td>
+                        <label class="custom-control availability-checkbox checkbox-day">
+                            <input type="checkbox" style="opacity:0; position:absolute;" class="custom-control-input">
+                            <span class="custom-control-indicator"></span>
+                        </label>
+                    </td>
+                    <td>
+                        <label class="custom-control availability-checkbox checkbox-day">
+                            <input type="checkbox" style="opacity:0; position:absolute;" class="custom-control-input">
+                            <span class="custom-control-indicator"></span>
+                        </label>
+                    </td>
+                    <td>
+                        <label class="custom-control availability-checkbox checkbox-day">
+                            <input type="checkbox" style="opacity:0; position:absolute;" class="custom-control-input">
+                            <span class="custom-control-indicator"></span>
+                        </label>
+                    </td>
+                    <td>
+                        <label class="custom-control availability-checkbox checkbox-day">
+                            <input type="checkbox" style="opacity:0; position:absolute;" class="custom-control-input">
+                            <span class="custom-control-indicator"></span>
+                        </label>
+                    </td>
+                    <td>
+                        <label class="custom-control availability-checkbox checkbox-day">
+                            <input type="checkbox" style="opacity:0; position:absolute;" class="custom-control-input">
+                            <span class="custom-control-indicator"></span>
+                        </label>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        </div>
+        <div class="w3-container w3-card w3-white w3-round w3-margin"><br>
+            <img src="64345302_2297428613840954_2391830260229341184_n.jpg" alt="Noha Khaled" class="w3-left w3-circle w3-margin-right" style="width:60px">
+            <span class="w3-right w3-opacity">1 min</span>
+            <h4>Baby Sitter</h4><br>
+            <hr class="w3-clear">
+            <p>I am searching for a baby sitter job. I am good in .. .....</p>
+            <div class="w3-row-padding" style="margin:0 -16px">
+                <div class="w3-half">
+                    <img src="/w3images/lights.jpg" style="width:100%" alt="" class="w3-margin-bottom">
+                </div>
+                <div class="w3-half">
+                    <img src="/w3images/nature.jpg" style="width:100%" alt="" class="w3-margin-bottom">
+                </div>
+            </div>
+            <button type="button" class="w3-button w3-theme-d1 w3-margin-bottom"><i class="fa fa-thumbs-up"></i>  Like</button>
+            <button type="button" class="w3-button w3-theme-d2 w3-margin-bottom"><i class="fa fa-comment"></i>  Comment</button>
+        </div>
+    </div>
+
+    <!-- End Middle Column -->
+    
+    <!-- Right Column -->
+    <div class="w3-col m2">
+      <div class="w3-card w3-round w3-white w3-padding-16 w3-center">
+        <p>ADS</p>
+
+    </div>
+  </div>
+  
+<!-- End Page Container -->
+</div>
+<br>
+    <div class="container">
+
+
+    <!-- Footer -->
+
+</div>
+</div>
+</body>
+</html> 
