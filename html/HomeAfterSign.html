@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>جalesak</title>
+    <link rel="stylesheet" href="responsive2.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="firstPage">
+    <ul class="nav navbar-nav">
+        <li class="active"><a href="#i" style="text-decoration: none; color:blanchedalmond;font-family:arial;">Home</a>
+        </li>
+        <li><a href="#zz" style="text-decoration: none; color:blanchedalmond;  font-family:arial;">About Us</a></li>
+        <li><a href="#z" style="text-decoration: none; color:blanchedalmond;  font-family:arial;">Find Sitter Jobs</a>
+        </li>
+        <nav role='navigation'>
+            <div id="menuToggle">
+                <input type="checkbox"/>
+                <span></span>
+                <span></span>
+                <span></span>
+                <ul id="menu">
+                    <a href="profile" style="text-decoration:none; color:blanchedalmond;font-family:arial;">Hello,
+                        <% HttpSession newSession = request.getSession(false);
+                        String fname = newSession.getAttribute("fname").toString();
+                        out.print(fname);
+                        %></a>
+                    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-padding-large w3-hover-white" title="My Account">
+                        <img src="profile.jpg" class="w3-circle" style="height:23px;width:23px" alt="<%HttpSession mysession = request.getSession(false);
+            mysession.getAttribute("username");%>">
+                    </a>
+                    <a href="Galesak.html" target= "_self">
+                        <li>Sign Out!</li>
+                    </a>
+                </ul>
+            </div>
+        </nav>
+    </ul>
+    <div id="i" class="c">
+        <h1>جalesak</h1>
+        <h5>We care for you</h5>
+        <div class="trans1"><p><a href="#zzz" class="table"
+                                  style="text-decoration: none; color:white;font-family:arial;font-size: 0.4545em;margin: 10px 10px 10px 90px;">Quickly
+            find a sitter</a></p></div>
+        <div class="trans2"><p><a href="signup.jsp" class="menu"
+                                  style="text-decoration: none; color:white;font-family:arial;font-size: 0.4545em;margin: 10px 10px 10px 130px;">Apply
+            for a job</a></p></div>
+    </div>
+</div>
+<div id="z" class="secondPage">
+    <div>
+        <h1 class="h1">Find Sitter Jobs</h1><br>
+        <div class="yarab">
+            <p class="paragraph">Find people searching for sitters, just add your location. </p><br>
+            <input class="form-control mr-sm-2" type="text" placeholder="Search by location.." aria-label="Search">
+            <a href="sitterjobs.jsp" class="ebsearch2" type="submit" role="button">Search</a>
+        </div>
+    </div>
+</div>
+<div id="zzz" class="fourthPage">
+    <h1 class="h2">Request Sitters to help</h1><br>
+    <p class="paragraph2">Find the type of sitter you're searching for, just add your location. </p><br>
+    <input class="form-control mr-sm-2" type="text" placeholder="Search by location.." aria-label="Search">
+    <a href="search.jsp" class="ebsearch2" type="submit" role="button">Search</a>
+</div>
+<div id="zz" class="thirdPage">
+    <div class="transparent">
+        <h1 class="anotherh1">Just the right place</h1><br>
+        <p class="anotherpara"> "جalesak" site where you can find sitters that would help you to take care of your child
+            or your elder parent or even for your own help.</p><br>
+    </div>
+</div>
+<div class="footer">
+    <div>
+        <ul class="nav navbar-nav">
+            <li class="active"><a href="#i"
+                                  style="text-decoration: none; color:blanchedalmond;font-family:arial;">Home</a></li>
+            <li><a href="#zz" style="text-decoration: none; color:blanchedalmond;  font-family:arial;">About Us</a></li>
+            <li><a href="#z" style="text-decoration: none; color:blanchedalmond;  font-family:arial;">Find Sitter
+                Jobs</a></li>
+        </ul>
+    </div>
+
+</div>
+</body>
+</html>

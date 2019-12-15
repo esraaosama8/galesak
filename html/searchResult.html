@@ -1,0 +1,246 @@
+<%--
+Document   : searchresult
+Created on : Jun 11, 2019, 5:59:20 PM
+Author     : BOBA
+--%>
+
+
+<%@page import="java.util.ArrayList"%>
+<%@page import="java.util.List"%>
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <style>
+        body {
+            background-image: url("result.jpg");
+            background-position: 30% 30%;
+            background-repeat: inherit;
+            background-size: 3300px;
+        }
+    </style>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        /* Create two equal columns that floats next to each other */
+        .column {
+            float: left;
+            width: 30%;
+            padding: 10px;
+            margin-left: 10px;
+        }
+
+        .column1 {
+            float: left;
+            width: 20%;
+            padding: 10px;
+            margin-left: 50px;
+        }
+
+        .column2 {
+            float: left;
+            width: 30%;
+            padding: 10px;
+            margin-left: 20px;
+        }
+
+        /* Clear floats after the columns */
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+    </style>
+    <style>
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #1a1a1791;
+        }
+
+        li {
+            float: left;
+        }
+
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 30px 20px 190px;
+            text-decoration: none;
+            font-size: large;
+            font-family: arial;
+
+        }
+    </style>
+
+</head>
+
+<body>
+
+<ul>
+    <li><a class="active" href="galesak.jsp">Home</a></li>
+    <li><a href="#">About Us</a></li>
+    <li><a href="galesak.jsp">Find Jobs</a></li>
+    <li><a href="profile.jsp">Hello, noha </a></li>
+</ul>
+
+<div class="row">
+
+
+    <div class="column1">
+        <br>
+        <h3 style="background-color: rgba(0,0,0,0.5); color:white;" class="text-center">Filter Results </h3>
+        <hr>
+        <form action="filter">
+            <div class="card">
+                <article class="card-group-item">
+                    <header class="card-header">
+                        <h6 class="title">Choose sitter type </h6>
+                    </header>
+                    <div class="filter-content">
+                        <div class="card-body">
+                            <label class="form-check">
+                                <input class="form-check-input" type="radio" name="exampleRadio" value="baby sitter">
+                                <span class="form-check-label">
+			    Baby sitter
+			  </span>
+                            </label>
+                            <label class="form-check">
+                                <input class="form-check-input" type="radio" name="exampleRadio" value="elder sitter">
+                                <span class="form-check-label">
+			   Elder sitter
+			  </span>
+                            </label>
+
+                        </div> <!-- card-body.// -->
+                    </div>
+                </article> <!-- card-group-item.// -->
+            </div>
+
+            <div class="card">
+                <article class="card-group-item">
+                    <header class="card-header">
+                        <h6 class="title">Years of experience </h6>
+                    </header>
+                    <div class="filter-content">
+                        <div class="card-body">
+
+                            <label class="form-check">
+                                <input class="form-check-input" type="radio"  name="exp" value="1">
+                                <span class="form-check-label">0-1 Years </span>
+                            </label> <!-- form-check.// -->
+                            <label class="form-check">
+                                <input class="form-check-input" type="radio"  name="exp" value="3">
+                                <span class="form-check-label"> 2-3 Years</span>
+                            </label>  <!-- form-check.// -->
+                            <label class="form-check">
+                                <input class="form-check-input" type="radio"  name="exp" value="5">
+                                <span class="form-check-label"> 4-5 Years</span>
+                            </label>  <!-- form-check.// -->
+                        </div> <!-- card-body.// -->
+                    </div>
+                </article>
+            </div>
+            <div class="card">
+                <article class="card-group-item">
+                    <header class="card-header">
+                        <h6 class="title">Pay rate per hour</h6>
+                    </header>
+                    <div class="filter-content">
+                        <div class="card-body">
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <label>Min</label>
+                                    <input type="number" class="form-control" name="min" id="inputEmail4" placeholder="$0">
+                                </div>
+                                <div class="form-group col-md-6 text-right">
+                                    <label>Max</label>
+                                    <input type="number" class="form-control" name="max" placeholder="$1,0000">
+                                </div>
+                            </div>
+                        </div> <!-- card-body.// -->
+                    </div>
+                </article>
+                <button class="ebsearch2" style="width: 242px; color: white;  background-color:#007bff; border-color:#007bff; font-size: large;" type="submit">
+                    Filter
+                </button>
+            </div>
+
+        </form>
+
+    </div>
+
+
+    <div class="column">
+        <br>
+        <h3 style="background-color: rgba(0,0,0,0.5); color:white;" class="text-center">Search Results </h3>
+        <hr>
+        <!-- Write your code in here ya hebaaaaaaaaaa  -->
+        <% class info{ String types , name ,description;
+        info(){
+        name="";
+        types ="";
+        description ="";
+        }}
+        ArrayList<info> datta = new ArrayList<info>();
+        HttpSession newSession = request.getSession(false);
+        String z= newSession.getAttribute("arraysize").toString();
+        int size = Integer.parseInt(z);
+        for(int q=0 ;q<size;q++){
+        info a = new info();
+        a.name =  newSession.getAttribute("data.name"+q).toString();
+        a.types = newSession.getAttribute("data.type"+q).toString();
+        a.description = newSession.getAttribute("data.nadesc"+q).toString();
+        datta.add(a);
+        }
+        if(size==0){out.println(" No Results Found");}
+        %>
+
+        <!--  <% for(int i = 0; i<size ; i++){ %> -->
+        <div class="card">
+            <article class="card-group-item">
+                <img class="card-img-top" src="user3.jpg" alt="Card image" style="width:20%">
+                <div class="card-body">
+                    <h4 class="card-title"> <%= datta.get(i).name %></h4>
+                    <h5 class="card-title"> <%= datta.get(i).types %> </h5>
+                    <p class="card-text"> <%=datta.get(i).description %></p>
+                    <a href="profile.jsp" class="btn btn-primary">See Profile</a>
+                </div>
+            </article>
+            <!-- <% } datta.clear();%> -->
+            <!--  Write your code in here ya hebaaaaaaaaaa  -->
+        </div>
+    </div>
+
+
+
+     <!-- <div class="column2">
+           <br>
+           <h3 style="background-color: rgba(0,0,0,0.5); color:white;" class="text-center"> Ads </h3>
+           <hr>
+           <form>
+               <div class="card">
+                   <article class="card-group-item">
+                       <div class="filter-content">
+                           <div class="card-body">
+                               <H1> Here goes the ads of Galesak. </H1>
+                           </div>
+                       </div>
+                   </article>
+               </div>
+           </form>
+       </div>-->
+</div>
+</body>
+</html>

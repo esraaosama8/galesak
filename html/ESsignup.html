@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <link rel="stylesheet" href="styles.css" type="text/css">
+</head>
+<body>
+<div class="container1" id="wrap">
+    <div class="col-md-6 col-md-offset-3">
+        <div class="account-wall">
+            <form class="form-signin">
+                <legend>Elder sitter Forum</legend>
+                <div class="row">
+                    <div class="row">
+                        <div class="row">
+                            <div class="row">
+                                <label for="pay">Organization's code:</label>
+                                <input type="integer" id="code" name="code" placeholder="Enter our organization's code" maxlength="5" required>
+                                <label>Address:</label>
+                                <select id="cities" name="cities" required>
+                                    <option value="cairo" selected>Cairo</option>
+                                    <option value="alex">Alexandria</option>
+                                    <option value="giza">Giza</option>
+                                    <option value="newcairo">New Cairo</option>
+                                    <option value="portsaid">Port Said</option>
+                                    <option value="ismailia">Ismailia</option>
+                                    <option value="mansoura">Mansoura</option>
+                                    <option value="tanta">Tanta</option>
+                                    <option value="zagazig">Zagazig</option>
+                                    <option value="marsamatrouh">Marsa Matrouh</option>
+                                </select>
+                                <select id="region" name="rigion" required>
+                                    <option value="october" selected>6 October</option>
+                                    <option value="zayed">Sheikh Zayed</option>
+                                    <option value="dokki">Dokki</option>
+                                    <option value="mohandsen">Mohandessen</option>
+                                    <option value="sidibishr">Sidi Bishr</option>
+                                    <option value="montazah">Al Montaza</option>
+                                    <option value="shubra">Shubra</option>
+                                    <option value="imbaba">Imbaba</option>
+                                    <option value="nasrcity">Nasr city</option>
+                                    <option value="sidigaber">Sidi Gaber</option>
+                                    <option value="maadi">Maadi</option>
+                                    <option value="heliopolis">Heliopolis</option>
+                                </select>
+                                <label for="street">Street:</label>
+                                <input type="text" id="street" name="street" placeholder="Your street is optional.." maxlength="50">
+                                <label for="phone">Phone Number:</label>
+                                <input type="tel" id="phone" name="phone" placeholder="Your phone number.." pattern="[0-9] {11}" required>
+                                <h4><i>*Your number is private to keep you secure</i></h4>
+                                <label for="nationalid">National ID:</label>
+                                <input type="integer" id="nationalid" name="nationalid" placeholder="Your national ID .." maxlength="14" required>
+                                <h4><i>*Your national ID is private to keep you secure</i></h4>
+                                <label for="experience">Experience</label>
+                                <select id="experience" name="experience" required>
+                                    <option value="0-1" selected>0-1 years</option>
+                                    <option value="1-2">1-2 years</option>
+                                    <option value="2-3">2-3 years</option>
+                                    <option value="3-4">3-4 years</option>
+                                    <option value="4-5">4-5 years</option>
+                                </select>
+                                <label for="experience">Do you smoke?</label>
+                                <fieldset>
+                                    <input id="yes" type="radio" value="yes" name="smoking">
+                                    <label for="yes">Yes</label><br>
+                                    <input id="no" type="radio" value="no" name="smoking">
+                                    <label for="yes">No</label><br>
+                                </fieldset>
+                                <label for="experience">Can you Drive?</label>
+                                <fieldset>
+                                    <input id="y" type="radio" value="yes" name="driving">
+                                    <label for="y">Yes</label><br>
+                                    <input id="n" type="radio" value="no" name="driving">
+                                    <label for="n">No</label><br>
+                                </fieldset>
+                                <label for="pay">Minimum pay rate per hour:</label>
+                                <input type="integer" id="pay" name="pay" placeholder="salary in EG pounds" maxlength="3" required>
+                                <label for="Description">Description:</label>
+                                <textarea style="width: 400px" type="text" id="description" name="description" placeholder="About yourself.." style="height:200px"></textarea>
+                                <a href="SitterAval.jsp" class="btn btn-lg btn-primary btn-block signup-btn" id="button" type="submit" role="button">Create my account</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
